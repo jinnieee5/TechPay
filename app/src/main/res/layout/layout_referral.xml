@@ -60,7 +60,7 @@
                                     android:padding="4dp"
                                     android:text="ID" />
                                 <TextView
-                                    android:id="@+id/tv_referrals_id"
+                                    android:id="@+id/tv_top_referrals_id"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:padding="4dp"
@@ -109,7 +109,7 @@
                                 android:layout_weight="1"
                                 android:text="My Referral ID :" />
                             <TextView
-                                android:id="@+id/textView3"
+                                android:id="@+id/tv_my_referral_id"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
@@ -133,7 +133,7 @@
                                 android:layout_weight="1"
                                 android:text="Referral Link :" />
                             <TextView
-                                android:id="@+id/textView5"
+                                android:id="@+id/tv_referral_link"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
