@@ -1,0 +1,108 @@
+<resources>
+    <string name="app_name">TechPay</string>
+
+    <!--coin image url-->
+    <string name="coinImageUrl">https://techpayexchange-backend.techpay.io/CoinImages/</string>
+
+    <!--buttons-->
+    <string name="btn_login">Log In</string>
+    <string name="btn_createWallet">Create Wallet</string>
+    <string name="btn_continue">Continue</string>
+    <string name="btn_submit">Submit</string>
+    <string name="btn_cancel">Cancel</string>
+    <string name="btn_next">Next</string>
+    <string name="btn_buyNow">Buy Now</string>
+    <string name="btn_sellNow">Sell Now</string>
+    <string name="btn_sendNow">Send Now</string>
+    <string name="btn_shareAddress">Share Address</string>
+    <string name="btn_changePassword">Change Password</string>
+    <string name="btn_updateProfile">Update Profile</string>
+
+    <!--headers-->
+    <string name="header_login">Get Started</string>
+    <string name="header_forgot_password">Forgot Password</string>
+    <string name="header_createWallet">New Wallet</string>
+    <string name="header_dashboard">Dashboard</string>
+    <string name="header_wallets">Wallets</string>
+    <string name="header_markets">Markets</string>
+    <string name="header_balance">Balance</string>
+    <string name="header_orderFilter">Order Filter</string>
+    <string name="header_transactions">Transaction History</string>
+    <string name="header_orderHistory">Order History</string>
+    <string name="header_openOrders">Open Orders</string>
+    <string name="header_settings">Settings</string>
+    <string name="header_account">My Account</string>
+    <string name="header_sendCoin">Send</string>
+    <string name="header_requestCoin">Request</string>
+    <string name="header_balances_underline"><u>Balances</u></string>
+    <string name="header_priceCharts_underline"><u>Price Charts</u></string>
+    <string name="header_createTicket">Create Ticket</string>
+    <string name="header_replyTicket">View / Reply Ticket</string>
+    <string name="header_allTicketList">Tickets</string>
+    <string name="header_viewAll_underline"><u>All Tickets</u></string>
+    <string name="header_login_history">Login History</string>
+    <string name="header_showAllWalletBalances_underline"><u>Show All Wallet Balances</u></string>
+    <string name="header_hideLowWalletBalances_underline"><u>Hide Small Balances</u></string>
+
+    <!--form hints-->
+    <string name="hint_email">Email ID</string>
+    <string name="hint_pass">Password</string>
+    <string name="hint_conPass">Confirm Password</string>
+
+    <!--error messages-->
+    <string name="error_noInternet">No Internet Connection !</string>
+    <string name="error_invalidEmail">Invalid Email ID</string>
+    <string name="error_invalidConfirmPassword">Passwords don\'t match.</string>
+    <string name="errorOccur">Poor internet connection</string>
+    <string name="error_sessionExpire">your session has been expired.</string>
+
+    <!--font-awesome icons-->
+
+    <!--toast messages-->
+    <string name="msg_buy_n_sell">Buy &amp; Sell</string>
+    <string name="msg_forgotPassword_underline"><u>Forgot Password ?</u></string>
+    <string name="msg_twoStepVerification">Protect your wallet from unauthorized access by enabling 2-step Verification.</string>
+    <string name="msg_secretPIN">We have recommend you to set a secret pin to make your account more secure.</string>
+    <string name="msg_changePassword">If you notice any suspicious activity, we recommend changing your password.</string>
+    <string name="msg_enableScreenshots">Some screens within the application can display sensitive data.
+                                            Other applications will be able to access these screenshots.</string>
+    <string name="msg_enterPin">Enter your PIN</string>
+    <string name="msg_createPin">Create new PIN</string>
+    <string name="msg_confirmPin">Confirm</string>
+    <string name="msg_copyAddress">Tap to copy this address. Share it with the sender via email or text.</string>
+    <string name="msg_mailVerification">An authentication has been sent to your Email ID, please check and update.</string>
+    <string name="msg_wait">Please wait</string>
+    <string name="msg_createWallet">By creating a new wallet you agree to the </string>
+    <string name="msg_tos">Terms of Service</string>
+    <string name="msg_noTransactions">No Transaction Yet</string>
+    <string name="msg_noOrders">No Order Yet</string>
+    <string name="msg_secretPinDialog">* <b><u>Secure Your Account</u></b> with this new Backup Key. Copy this Backup Key for future use.</string>
+    <string name="msg_secretPinDialogNote">* You will lose your account if you lose your Secret PIN and Backup Key.</string>
+    <string name="msg_uploadProfilePic_underline"><u>upload profile pic</u></string>
+    <string name="msg_checkLiveStatus_underline"><u>Check Live Status</u></string>
+    <string name="msg_selfPhotoWithID">Please Hold the ID Proof in your hand next to your face. Both your face and ID Proof must be clearly visible and any text
+        , Number or photos on the ID proof must be readable and not be covered by your fingers.</string>
+
+    <string name="supported_formats">Supported formats :.doc,.docx,.csv,.xls,.xlsx,.pdf,.jpg,.png,.bmp</string>
+    <string name="updateMsg">There is a newer version available for download! Please upgrade the app by visiting the Google Play Store</string>
+
+    <!--settings header-->
+    <string name="setting_preferences"><u>Preferences</u></string>
+    <string name="setting_security"><u>Security</u></string>
+    <string name="setting_app"><u>App</u></string>
+
+    <!--menu items-->
+    <string name="menu_support">Support</string>
+    <string name="menu_account">My Account</string>
+    <string name="menu_settings">Settings</string>
+    <string name="menu_loginHistory">Login History</string>
+    <string name="menu_logout">Logout</string>
+
+    <!--id proof dropdown-->
+    <string-array name="idTypeDropdown">
+        <item>Passport</item>
+        <item>Driving Licence</item>
+        <item>National Identitification</item>
+    </string-array>
+
+</resources>

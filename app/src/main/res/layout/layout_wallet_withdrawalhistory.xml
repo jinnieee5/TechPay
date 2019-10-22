@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="walletWithdrawalScreen"
+            type="crypto.base.baseexchange.binders.WalletWithdrawalHistoryBinder" />
+    </data>
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/walletBackground">
+        <LinearLayout
+            android:id="@+id/layout_emptyTransaction"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:visibility="visible">
+            <TextView
+                style="@style/SmallTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/msg_noTransactions"
+                android:textColor="@color/iconColor"
+                android:textSize="16sp"
+                android:padding="@dimen/dimen10dp"
+                android:fontFamily="@font/gotham_rounded_light"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_withdrawalHistory"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible"/>
+    </FrameLayout>
+</layout>

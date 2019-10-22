@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="marketCoinScreen"
+            type="crypto.base.baseexchange.binders.MarketCoinBinder" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/walletBackground">
+        <include
+            android:id="@+id/layout_marketHeader"
+            layout="@layout/layout_wallet_header"/>
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabs_marketCoins"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/headerColor" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/headerDarkColor"
+            android:paddingTop="@dimen/dimen5dp"
+            android:paddingBottom="@dimen/dimen5dp"
+            android:paddingStart="@dimen/dimen10dp"
+            android:paddingEnd="@dimen/dimen10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textStart"
+                android:text="Pair / Vol"
+                android:textSize="14sp"
+                android:textColor="@color/iconColor"
+                android:fontFamily="@font/gotham_rounded_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:text="Last Price"
+                android:textSize="14sp"
+                android:textColor="@color/iconColor"
+                android:fontFamily="@font/gotham_rounded_light"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="textEnd"
+                android:text="24h Chg%"
+                android:textSize="14sp"
+                android:textColor="@color/iconColor"
+                android:fontFamily="@font/gotham_rounded_light"/>
+        </LinearLayout>
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/vp_marketCoins"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior"
+            android:visibility="gone"/>
+        <FrameLayout
+            android:id="@+id/frame_marketContent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

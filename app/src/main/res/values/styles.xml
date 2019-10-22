@@ -1,0 +1,93 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <!-- Button Text Theme -->
+    <style name="ButtonTextTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">true</item>
+        <item name="android:padding">10dp</item>
+        <item name="android:fontFamily">@font/gotham_rounded_medium</item>
+    </style>
+
+    <!-- Button-Dark Frame Theme -->
+    <style name="ButtonDarkFrameTheme">
+        <item name="android:background">@drawable/shape_rectangle_button_dark</item>
+        <item name="android:elevation">5dp</item>
+        <item name="android:layout_marginRight">5dp</item>
+        <item name="android:layout_marginLeft">5dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+    </style>
+
+    <!-- Header Text Theme -->
+    <style name="HeaderTextTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textColor">@color/textColor</item>
+    </style>
+
+    <!-- Form Header Text Theme -->
+    <style name="FormHeaderTextTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/walletBackground</item>
+        <item name="android:fontFamily">@font/gotham_rounded_light</item>
+    </style>
+
+    <!-- Menu Text Theme -->
+    <style name="MenuTextTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="android:fontFamily">@font/gotham_rounded_light</item>
+    </style>
+
+    <!-- Small Text Theme -->
+    <style name="SmallTextTheme" parent="@android:style/Theme.Holo.Light">
+        <item name="android:textStyle">normal</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
+
+    <!-- Edittext Theme -->
+    <style name="EdittextTheme" parent="Widget.AppCompat.EditText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/textColor</item>
+        <item name="android:background">@drawable/shape_bottomline_themelightcolor</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:fontFamily">@font/gotham_rounded_light</item>
+    </style>
+
+    <!-- Edittext No Bottom Theme -->
+    <style name="EdittextBlankTheme" parent="Widget.AppCompat.EditText">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textColorHint">@color/textColor</item>
+        <item name="android:background">@null</item>
+        <item name="android:textCursorDrawable">@null</item>
+        <item name="android:fontFamily">@font/gotham_rounded_light</item>
+    </style>
+
+    <!-- Dialog Theme -->
+    <style name="MyAlertDialogStyle" parent="@android:style/Theme.Holo.Dialog">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:windowSoftInputMode">stateUnspecified|adjustPan</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

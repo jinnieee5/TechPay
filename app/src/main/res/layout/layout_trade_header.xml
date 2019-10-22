@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/headerColor"
+    android:elevation="@dimen/dimen10dp">
+    <ImageView
+        android:id="@+id/iv_headerChart"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        android:src="@drawable/bar_chart"
+        android:padding="@dimen/dimen5dp"
+        android:layout_marginStart="@dimen/dimen10dp"/>
+    <FrameLayout
+        android:id="@+id/frame_coinSpinner"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:layout_gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="@dimen/dimen5dp">
+        <Spinner
+            android:id="@+id/coinPairingSpinner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:backgroundTint="@color/white"/>
+    </FrameLayout>
+    <TextView
+        android:id="@+id/tv_orderHistory"
+        style="@style/SmallTextTheme"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="0"
+        android:layout_gravity="center"
+        android:text="Order History"
+        android:textSize="14sp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/gotham_rounded_light"
+        android:padding="@dimen/dimen5dp"/>
+</LinearLayout>

@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="@color/headerColor"
+    android:paddingBottom="@dimen/dimen10dp">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Secret PIN"
+        android:layout_gravity="center_horizontal"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:fontFamily="@font/gotham_rounded_light"
+        android:padding="@dimen/dimen10dp"
+        android:background="@drawable/shape_walletbalancelist_background"/>
+    <EditText
+        android:id="@+id/ed_pin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/dimen10dp"
+        android:layout_marginEnd="@dimen/dimen10dp"
+        android:textColor="@color/white"
+        android:textSize="14sp"
+        android:fontFamily="@font/gotham_rounded_light"
+        android:backgroundTint="@color/white"/>
+    <FrameLayout
+        android:id="@+id/frame_continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen20dp"
+        android:layout_marginRight="@dimen/dimen10dp"
+        android:layout_marginLeft="@dimen/dimen10dp"
+        android:paddingTop="@dimen/dimen5dp"
+        android:paddingBottom="@dimen/dimen5dp"
+        android:paddingStart="@dimen/dimen10dp"
+        android:paddingEnd="@dimen/dimen10dp"
+        android:layout_gravity="bottom|center"
+        android:background="@color/white"
+        android:visibility="visible">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/btn_continue"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:fontFamily="@font/gotham_rounded_medium"/>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable
+            name="setTicketListScreen"
+            type="crypto.base.baseexchange.binders.TicketListBinder" />
+    </data>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/walletBackground">
+        <include
+            android:id="@+id/include_header"
+            layout="@layout/layout_wallet_header"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ticketList"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </LinearLayout>
+</layout>

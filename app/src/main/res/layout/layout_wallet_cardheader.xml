@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    app:cardCornerRadius="0dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tv_walletName"
+                style="@style/SmallTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/iconColor"
+                android:text="Assets Value (USDT)"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:fontFamily="@font/gotham_rounded_light"
+                android:padding="@dimen/dimen5dp"/>
+            <TextView
+                android:id="@+id/tv_totalWalletBalanceInUsdt"
+                style="@style/SmallTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/white"
+                android:text="0.00000000 USDT"
+                android:textAlignment="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/gotham_rounded_medium"/>
+            <TextView
+                android:id="@+id/tv_totalWalletBalanceInBtc"
+                style="@style/SmallTextTheme"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/iconColor"
+                android:text="= 0.00 BTC"
+                android:textAlignment="center"
+                android:textSize="14sp"
+                android:fontFamily="@font/gotham_rounded_light"
+                android:padding="@dimen/dimen5dp"/>
+        </LinearLayout>
+</FrameLayout>

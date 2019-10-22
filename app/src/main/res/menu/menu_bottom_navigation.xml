@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_markets"
+        android:enabled="true"
+        android:icon="@drawable/markets"
+        android:title="Markets"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/menu_trades"
+        android:enabled="true"
+        android:icon="@drawable/trade"
+        android:title="Trades"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/menu_wallets"
+        android:enabled="true"
+        android:icon="@drawable/wallet"
+        android:title="Wallets"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/menu_account"
+        android:enabled="true"
+        android:icon="@drawable/user_account"
+        android:title="Account"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"/>
+</menu>

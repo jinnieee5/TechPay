@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--app theme-->
+    <color name="colorPrimary">#1c2030</color>
+    <color name="colorPrimaryDark">#1F2335</color>
+    <color name="colorAccent">#F34A51</color>
+    <color name="themeLightColor">#2C278D</color>
+    <color name="themeDarkColor">#131061</color>
+    <color name="themeHighlightColor">#00CACA</color>
+
+    <!--ripple effect-->
+    <color name="deepRed">#BE3C3C</color>
+    <color name="deepGreen">#32CD32</color>
+    <color name="deepYellow">#f8c600</color>
+
+    <!--priorities color-->
+    <color name="priorityLow">#80e05b</color>
+    <color name="priorityMedium">#fec538</color>
+    <color name="priorityHigh">#ff3131</color>
+
+    <!--Secret Pin Dialog-->
+    <color name="secretPinDialogButton">#1a7f31</color>
+
+    <!--Chat-->
+    <color name="chatMeBgColor">#238ce8</color>
+    <color name="chatSupportBgColor">#f9f9f9</color>
+
+    <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="transparent">#00bdbdbd</color>
+    <color name="bottomLine">#DAD9D9</color>
+
+    <color name="textColor">#626262</color>
+    <color name="smallTextColor">#808080</color>
+    <color name="dashboardBackground">#F0F0F0</color>
+
+    <!-- new theme -->
+    <color name="headerColor">#1c2030</color>
+    <color name="headerDarkColor">#1F2335</color>
+    <color name="themeDarkColor1">#273A49</color>
+    <color name="textColorLight">#5E819C</color>
+    <color name="textColorDark">#495763</color>
+    <color name="iconColor">#BDBDBD</color>
+    <color name="bottomLineColor">#383838</color>
+
+    <color name="tradeBuyColor">#00838F</color>
+    <color name="tradeSellColor">#D500F9</color>
+    <color name="tradeIconColor">#5E819C</color>
+    <color name="tradeBackground">#161925</color>
+
+    <color name="walletBackground">#161925</color>
+    <color name="walletCardBackground">#651FFF</color>
+
+</resources>

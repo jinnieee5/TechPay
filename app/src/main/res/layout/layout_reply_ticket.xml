@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="ticketReplyScreen"
+            type="crypto.base.baseexchange.binders.TicketReplyBinder" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/dashboardBackground">
+        <include
+            android:id="@+id/include_header"
+            layout="@layout/layout_wallet_header"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_ticketChat"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/include_header"
+            android:layout_above="@id/ll_reply"
+            android:layout_marginBottom="@dimen/dimen5dp"/>
+        <LinearLayout
+            android:id="@+id/ll_reply"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="@dimen/dimen5dp"
+            android:background="@color/transparent">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/shape_rectangle_border_black">
+                <EditText
+                    android:id="@+id/ed_message"
+                    style="@style/EdittextTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/transparent"
+                    android:gravity="top"
+                    android:hint="Post a reply here"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:padding="5dp"
+                    android:scrollHorizontally="false"
+                    android:singleLine="false" />
+            </RelativeLayout>
+            <FrameLayout
+                android:id="@+id/frame_postReply"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0"
+                android:layout_gravity="center"
+                style="@style/ButtonDarkFrameTheme"
+                android:visibility="visible"
+                android:layout_margin="5dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:layout_gravity="center_horizontal"
+                    android:theme="@style/ButtonTextTheme" />
+            </FrameLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

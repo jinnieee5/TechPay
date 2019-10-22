@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="homeScreen"
+            type="crypto.base.baseexchange.binders.HomeBinder" />
+    </data>
+    <androidx.drawerlayout.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <FrameLayout
+                android:id="@+id/frame_main"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/bottom_menu" />
+            <com.google.android.material.bottomnavigation.BottomNavigationView
+                android:id="@+id/bottom_menu"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_alignParentBottom="true"
+                android:elevation="@dimen/dimen10dp"
+                android:visibility="visible"
+                app:layout_behavior="@string/hide_bottom_view_on_scroll_behavior"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
+                app:menu="@menu/menu_bottom_navigation"
+                app:backgroundTint="@color/headerColor"
+                app:itemIconTint="@color/iconColor"
+                app:itemTextColor="@color/iconColor"
+                app:itemRippleColor="@color/colorAccent"
+                app:itemIconSize="25dp" />
+        </RelativeLayout>
+    </androidx.drawerlayout.widget.DrawerLayout>
+</layout>

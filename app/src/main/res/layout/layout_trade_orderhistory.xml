@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable
+            name="tradeOrderHistoryScreen"
+            type="crypto.base.baseexchange.binders.TradeOrderHistoryBinder" />
+    </data>
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/tradeBackground">
+        <include
+            android:id="@+id/layout_header"
+            layout="@layout/layout_wallet_header"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/dimen10dp"
+            android:paddingBottom="@dimen/dimen10dp"
+            android:paddingStart="@dimen/dimen5dp"
+            android:paddingEnd="@dimen/dimen5dp"
+            android:background="@color/headerColor"
+            android:visibility="gone">
+            <TextView
+                android:id="@+id/tv_time"
+                style="@style/SmallTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Time"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="textStart"
+                android:fontFamily="@font/gotham_rounded_light"/>
+            <TextView
+                android:id="@+id/tv_secondCoinQty"
+                style="@style/SmallTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Qty BTC"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/gotham_rounded_light"/>
+            <TextView
+                android:id="@+id/tv_bidPrice"
+                style="@style/SmallTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="BID PRICE"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="center"
+                android:fontFamily="@font/gotham_rounded_light"/>
+            <TextView
+                android:id="@+id/tv_firstCoinPrice"
+                style="@style/SmallTextTheme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Total USDT"
+                android:textSize="14sp"
+                android:textColor="@color/white"
+                android:textAlignment="textEnd"
+                android:fontFamily="@font/gotham_rounded_light"/>
+        </LinearLayout>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_tradeOrderHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <TextView
+            android:id="@+id/tv_emptyTradeOrderHistoryList"
+            style="@style/SmallTextTheme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/msg_noTransactions"
+            android:textColor="@color/iconColor"
+            android:textSize="16sp"
+            android:padding="@dimen/dimen10dp"
+            android:fontFamily="@font/gotham_rounded_light"/>
+    </LinearLayout>
+</layout>
