@@ -97,6 +97,7 @@
     <string name="menu_settings">Settings</string>
     <string name="menu_loginHistory">Login History</string>
     <string name="menu_logout">Logout</string>
+    <string name="header_referral">Referral</string>
 
     <!--id proof dropdown-->
     <string-array name="idTypeDropdown">

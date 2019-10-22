@@ -126,6 +126,15 @@ public class HomeScreen extends BaseActivity {
                             } else setFragment(new AccountMainScreen());
                         }
                         break;
+                    case R.id.menu_referral:
+                        if(!(f instanceof ReferralScreen)) {
+                            if(SharedPrefUtils.getFromPrefs(HomeScreen.this, SharedPrefUtils.isLogin).equals("0")){
+                                Intent intent = new Intent(HomeScreen.this, EnterScreen.class);
+                                startActivity(intent);
+                            }else setFragment(new ReferralScreen());
+                        }
+
+                        break;
                 }
                 return true;
             }

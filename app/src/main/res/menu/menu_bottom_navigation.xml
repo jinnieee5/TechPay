@@ -30,4 +30,11 @@
         android:title="Account"
         app:showAsAction="ifRoom"
         android:iconTint="@color/white"/>
+    <item
+        android:id="@+id/menu_referral"
+        android:enabled="true"
+        android:icon="@drawable/referral"
+        android:title="Referral"
+        app:showAsAction="ifRoom"
+        android:iconTint="@color/white"/>
 </menu>
