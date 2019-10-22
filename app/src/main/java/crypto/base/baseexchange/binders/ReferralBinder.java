@@ -13,9 +13,11 @@ import com.google.gson.JsonArray;
 import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
 import java.util.List;
 import crypto.base.baseexchange.R;
 import crypto.base.baseexchange.adapters.ReferralRegisteredAdapter;
+import crypto.base.baseexchange.adapters.TopReferralPartnersAdapter;
 import crypto.base.baseexchange.api.ApiClient;
 import crypto.base.baseexchange.api.AuthApiHelper;
 import crypto.base.baseexchange.api.request.LoginTokenReq;
@@ -39,7 +41,14 @@ public class ReferralBinder {
         this.binding = binding;
         setHeader();
         getReferralDetails();
+       // getRecyclerAdapter();
     }
+
+    /*private void getRecyclerAdapter() {
+        ArrayList
+        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(context);
+        binding.rvTopReferralPartners.setAdapter(new ReferralRegisteredAdapter(context, list));
+    }*/
 
     private void setHeader() {
         TextView tv_header = binding.includeHeader.findViewById(R.id.tv_header);
@@ -92,11 +101,9 @@ public class ReferralBinder {
                             final Type listType1 = new TypeToken<List<TopReferralData>>() {}.getType();
                             final List<TopReferralData> topReferralDataList = new Gson().fromJson(jArray1, listType1);
                             if (!topReferralDataList.isEmpty()) {
-                                int totalReferralCount = topReferralDataList.get(0).getTotalReferralMember();
-                                String topReferralID = topReferralDataList.get(0).getTradesAccountNumber();
-
-                                binding.tvTotalReferrals.setText(totalReferralCount + "");
-                                binding.tvTopReferralsId.setText(topReferralID);
+                                LinearLayoutManager layoutManager = new LinearLayoutManager(context, RecyclerView.VERTICAL, false);
+                                binding.rvRegisteredReferral.setLayoutManager(layoutManager);
+                                binding.rvRegisteredReferral.setAdapter(new TopReferralPartnersAdapter(context, topReferralDataList));
                             }
 
                             JsonArray jArray2 = loginRes.getAsJsonArray("LatestReferralUser");
@@ -104,8 +111,8 @@ public class ReferralBinder {
                             final List<MyRegisteredReferralData> myRegisteredReferralDataList = new Gson().fromJson(jArray2, listType2);
                             if (!myRegisteredReferralDataList.isEmpty()) {
                                 LinearLayoutManager layoutManager = new LinearLayoutManager(context, RecyclerView.VERTICAL, false);
-                                binding.rvRegisteredReferral.setLayoutManager(layoutManager);
-                                binding.rvRegisteredReferral.setAdapter(new ReferralRegisteredAdapter(context, myRegisteredReferralDataList));
+                                binding.rvTopReferralPartners.setLayoutManager(layoutManager);
+                                binding.rvTopReferralPartners.setAdapter(new ReferralRegisteredAdapter(context, myRegisteredReferralDataList));
 
                             } else Log.e("rvTradeMarketSellOrders","empty");
 
