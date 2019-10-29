@@ -2,21 +2,26 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:padding="@dimen/dimen10dp"
-    android:orientation="horizontal">
-
-
+    android:orientation="horizontal"
+    android:background="@color/headerColor">
     <TextView
         android:id="@+id/tv_top_referrals_ids"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="123545" />
-
+        android:gravity="center"
+        android:text="ID"
+        android:textSize="14sp"
+        android:fontFamily="@font/gotham_rounded_light"
+        android:textColor="@color/white"/>
     <TextView
         android:id="@+id/tv_total_referralss"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="20" />
+        android:gravity="center"
+        android:text="Total Referral"
+        android:textSize="14sp"
+        android:fontFamily="@font/gotham_rounded_light"
+        android:textColor="@color/white"/>
 </LinearLayout>

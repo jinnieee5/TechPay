@@ -37,8 +37,7 @@ public class TopReferralPartnersAdapter extends RecyclerView.Adapter<TopReferral
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         TopReferralData data = list.get(position);
         holder.tvTopReferralIds.setText(data.getTradesAccountNumber());
-        holder.tvTotalReferrals.setText(data.getTotalReferralMember() + "");
-
+        holder.tvTotalReferrals.setText(String.valueOf(data.getTotalReferralMember()));
     }
 
     @Override
