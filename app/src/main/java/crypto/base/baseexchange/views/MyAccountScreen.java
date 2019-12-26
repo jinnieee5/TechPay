@@ -4,6 +4,7 @@ import android.Manifest;
 import android.app.DatePickerDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
@@ -35,12 +36,15 @@ import java.io.ByteArrayOutputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.security.Permission;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Objects;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
+import androidx.core.app.ActivityCompat;
+import androidx.core.content.ContextCompat;
 import androidx.databinding.DataBindingUtil;
 import crypto.base.baseexchange.R;
 import crypto.base.baseexchange.api.ApiClient;
@@ -81,12 +85,19 @@ public class MyAccountScreen extends BaseActivity {
         binding.tvUploadProfilePic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setProfilePic=1;
-                setSelfPhotoWithID=0;
-                setIdFrontImage=0;
-                setIdBackImage=0;
-                setPanCardImage=0;
-                CropImage.startPickImageActivity(MyAccountScreen.this);
+                if(ContextCompat.checkSelfPermission(MyAccountScreen.this,
+                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(MyAccountScreen.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            200);
+                } else {
+                    setProfilePic=1;
+                    setSelfPhotoWithID=0;
+                    setIdFrontImage=0;
+                    setIdBackImage=0;
+                    setPanCardImage=0;
+                    CropImage.startPickImageActivity(MyAccountScreen.this);
+                }
             }
         });
     }
@@ -94,9 +105,11 @@ public class MyAccountScreen extends BaseActivity {
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
+
+
         if (requestCode == CropImage.PICK_IMAGE_CHOOSER_REQUEST_CODE && resultCode == RESULT_OK) {
             Uri imageUri = CropImage.getPickImageResultUri(this, data);
-            if (CropImage.isReadExternalStoragePermissionsRequired(this, imageUri)) requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE}, 0);
+            if (CropImage.isReadExternalStoragePermissionsRequired(this, imageUri)) requestPermissions(new String[]{Manifest.permission.READ_EXTERNAL_STORAGE,}, 0);
             else startCropImageActivity(imageUri);
         }
 
@@ -690,7 +703,8 @@ public class MyAccountScreen extends BaseActivity {
                                 status = "<font color='"+getResources().getColor(R.color.deepYellow)+"'>pending</font>";
                                 binding.ivEditKyc.setVisibility(View.VISIBLE);
                             } else if (kycData.getKycStatus()==1) {
-                                status = "<font color='"+getResources().getColor(R.color.deepGreen)+"'>approved</font>";
+                                status = "<font color='"+getResources()
+                                        .getColor(R.color.deepGreen)+"'>approved</font>";
                                 binding.ivEditKyc.setVisibility(View.GONE);
                             } else if (kycData.getKycStatus()==2) {
                                 status = "<font color='"+getResources().getColor(R.color.deepRed)+"'>rejected</font>";
@@ -842,36 +856,57 @@ public class MyAccountScreen extends BaseActivity {
         iv_selfPhotoWithID.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setProfilePic=0;
-                setSelfPhotoWithID=1;
-                setIdFrontImage=0;
-                setIdBackImage=0;
-                setPanCardImage=0;
-                CropImage.startPickImageActivity(MyAccountScreen.this);
+                if(ContextCompat.checkSelfPermission(MyAccountScreen.this,
+                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(MyAccountScreen.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            200);
+                }else {
+                    setProfilePic=0;
+                    setSelfPhotoWithID=1;
+                    setIdFrontImage=0;
+                    setIdBackImage=0;
+                    setPanCardImage=0;
+                    CropImage.startPickImageActivity(MyAccountScreen.this);
+                }
             }
         });
 
         iv_idFrontImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setProfilePic=0;
-                setSelfPhotoWithID=0;
-                setIdFrontImage=1;
-                setIdBackImage=0;
-                setPanCardImage=0;
-                CropImage.startPickImageActivity(MyAccountScreen.this);
+                if(ContextCompat.checkSelfPermission(MyAccountScreen.this,
+                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(MyAccountScreen.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            200);
+                }else {
+                    setProfilePic=0;
+                    setSelfPhotoWithID=0;
+                    setIdFrontImage=1;
+                    setIdBackImage=0;
+                    setPanCardImage=0;
+                    CropImage.startPickImageActivity(MyAccountScreen.this);
+                }
             }
         });
 
         iv_idBackImage.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                setProfilePic=0;
-                setSelfPhotoWithID=0;
-                setIdFrontImage=0;
-                setIdBackImage=1;
-                setPanCardImage=0;
-                CropImage.startPickImageActivity(MyAccountScreen.this);
+                if(ContextCompat.checkSelfPermission(MyAccountScreen.this,
+                        Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+                    ActivityCompat.requestPermissions(MyAccountScreen.this,
+                            new String[]{Manifest.permission.CAMERA},
+                            200);
+                }else {
+                    setProfilePic=0;
+                    setSelfPhotoWithID=0;
+                    setIdFrontImage=0;
+                    setIdBackImage=1;
+                    setPanCardImage=0;
+                    CropImage.startPickImageActivity(MyAccountScreen.this);
+                }
             }
         });
 
