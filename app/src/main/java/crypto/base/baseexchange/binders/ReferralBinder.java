@@ -1,11 +1,17 @@
 package crypto.base.baseexchange.binders;
 
 import android.app.Activity;
+import android.content.ClipData;
+import android.content.ClipboardManager;
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import androidx.core.app.ShareCompat;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import com.google.gson.Gson;
@@ -79,10 +85,33 @@ public class ReferralBinder {
                             String referredFriends = loginRes.get("ReferredFriends").getAsString();
                             String activeReferrals = loginRes.get("ActiveReferrals").getAsString();
                             String estimatedEarnings = loginRes.get("EstimatedEarnings").getAsString();
-                            String referralLink = loginRes.get("ReferralLink").getAsString();
+                            final String referralLink = loginRes.get("ReferralLink").getAsString();
                             String referralCode = loginRes.get("ReferralCode").getAsString();
 
+
                             binding.tvReferralLink.setText(referralLink);
+                            binding.ivShare.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    String mimeType = "text/plain";
+                                    Intent shareIntent = ShareCompat.IntentBuilder.from((Activity) context)
+                                            .setType(mimeType)
+                                            .setText(referralLink)
+                                            .getIntent();
+                                        context.startActivity(shareIntent);
+                                }
+                            });
+
+
+                            binding.ivCopyReferralLink.setOnClickListener(new View.OnClickListener() {
+                                @Override
+                                public void onClick(View v) {
+                                    Toast.makeText(context, "Referral link copied", Toast.LENGTH_SHORT).show();
+                                    ClipboardManager clipboard = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
+                                    ClipData clip = ClipData.newPlainText("Referral Link", referralLink);
+                                    clipboard.setPrimaryClip(clip);
+                                }
+                            });
                             binding.tvMyReferralId.setText(referralCode);
 
                             binding.tvReferralPoints.setText(referredFriends);

@@ -68,16 +68,15 @@
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal">
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
-                                    android:gravity="center"
                                     android:text="Referral ID"
                                     android:textSize="16sp"
                                     android:fontFamily="@font/gotham_rounded_light"
                                     android:textColor="@color/white"/>
                                 <TextView
-                                    android:layout_width="wrap_content"
+                                    android:layout_width="match_parent"
                                     android:layout_height="wrap_content"
                                     android:layout_weight="1"
                                     android:gravity="center"
@@ -89,7 +88,8 @@
                             <androidx.recyclerview.widget.RecyclerView
                                 android:id="@+id/rv_top_referral_partners"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"/>
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dimen5dp"/>
                         </LinearLayout>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
@@ -100,65 +100,88 @@
                     app:cardElevation="10dp"
                     app:cardBackgroundColor="@color/headerColor"
                     android:layout_marginStart="@dimen/dimen10dp"
-                    android:layout_marginEnd="@dimen/dimen10dp"
-                    android:layout_marginBottom="@dimen/dimen10dp">
+                    android:layout_marginEnd="@dimen/dimen10dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:orientation="vertical">
+
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
                             android:padding="@dimen/dimen10dp">
-                            <TextView
-                                android:id="@+id/textView"
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="My Referral ID :"
-                                android:textColor="@color/white"/>
-                            <TextView
-                                android:id="@+id/tv_my_referral_id"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="1130254"
-                                android:textColor="@color/white"/>
+                                android:orientation="horizontal"
+                                >
+
+                                <TextView
+                                    android:id="@+id/textView"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="My Referral ID :"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tv_my_referral_id"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="@dimen/dimen5dp"
+                                    android:text="1130254"
+                                    android:textColor="@color/white" />
+
+                            </LinearLayout>
                             <ImageView
                                 android:id="@+id/iv_share"
-                                android:layout_width="24sp"
+                                android:layout_width="24dp"
                                 android:layout_height="24sp"
-                                android:layout_weight="1"
+                                android:layout_marginEnd="@dimen/dimen10dp"
+                                android:layout_marginStart="@dimen/dimen10dp"
+                                android:layout_gravity="center"
                                 app:srcCompat="@android:drawable/ic_menu_share" />
                         </LinearLayout>
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:orientation="horizontal"
-                            android:padding="10dp">
-                            <TextView
-                                android:id="@+id/textView4"
+                            android:padding="@dimen/dimen10dp">
+
+                            <LinearLayout
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
-                                android:text="Referral Link :"
-                                android:textColor="@color/white"/>
-                            <TextView
-                                android:id="@+id/tv_referral_link"
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:text="www.google.com"
-                                android:textColor="@color/white"/>
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/textView4"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Referral Link :"
+                                    android:textColor="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/tv_referral_link"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:paddingStart="@dimen/dimen5dp"
+                                    android:text="www.google.com"
+                                    android:textColor="@color/white" />
+                            </LinearLayout>
                             <ImageView
                                 android:id="@+id/iv_copy_referral_link"
                                 android:layout_width="24sp"
                                 android:layout_height="24sp"
-                                android:layout_weight="1"
+                                android:layout_marginEnd="@dimen/dimen10dp"
+                                android:layout_marginStart="@dimen/dimen10dp"
+                                android:layout_gravity="center"
                                 app:srcCompat="@drawable/copy"
                                 android:tint="@color/iconColor"/>
                         </LinearLayout>
+
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
@@ -166,11 +189,15 @@
                     android:layout_height="wrap_content"
                     app:cardCornerRadius="10dp"
                     app:cardElevation="10dp"
-                    app:cardBackgroundColor="@color/walletBackground"
-                    android:layout_marginBottom="@dimen/dimen10dp">
+                    app:cardBackgroundColor="@color/headerColor"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:layout_marginEnd="@dimen/dimen10dp">
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:paddingTop="@dimen/dimen10dp"
+                        android:paddingBottom="@dimen/dimen10dp"
                         android:orientation="vertical">
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -181,20 +208,22 @@
                                 android:id="@+id/imageView4"
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
-                                android:layout_weight="1"
+                                android:layout_marginStart="@dimen/dimen10dp"
+                                android:layout_marginEnd="@dimen/dimen20dp"
                                 app:srcCompat="@drawable/referral"
                                 android:tint="@color/iconColor"/>
                             <TextView
                                 android:id="@+id/textView11"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Referral Point"
                                 android:textColor="@color/white"/>
                             <TextView
                                 android:id="@+id/tv_referral_points"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:layout_weight="1"
                                 android:text="1"
                                 android:textColor="@color/white"/>
@@ -208,20 +237,22 @@
                                 android:id="@+id/imageView5"
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
-                                android:layout_weight="1"
+                                android:layout_marginStart="@dimen/dimen10dp"
+                                android:layout_marginEnd="@dimen/dimen20dp"
                                 app:srcCompat="@drawable/referral"
                                 android:tint="@color/iconColor"/>
                             <TextView
                                 android:id="@+id/textView14"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Active Referrals"
                                 android:textColor="@color/white"/>
                             <TextView
                                 android:id="@+id/tv_active_members"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:layout_weight="1"
                                 android:text="0"
                                 android:textColor="@color/white"/>
@@ -235,20 +266,22 @@
                                 android:id="@+id/imageView6"
                                 android:layout_width="24dp"
                                 android:layout_height="24dp"
-                                android:layout_weight="1"
+                                android:layout_marginStart="@dimen/dimen10dp"
+                                android:layout_marginEnd="@dimen/dimen20dp"
                                 app:srcCompat="@drawable/estimated_earnings"
                                 android:tint="@color/iconColor"/>
                             <TextView
                                 android:id="@+id/textView17"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Estimated Earning"
                                 android:textColor="@color/white"/>
                             <TextView
                                 android:id="@+id/tv_estimated_earning"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:layout_weight="1"
                                 android:text="0.0000"
                                 android:textColor="@color/white"/>
@@ -257,20 +290,25 @@
                 </androidx.cardview.widget.CardView>
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="@dimen/dimen10dp"
+                    android:layout_marginStart="@dimen/dimen10dp"
+                    android:layout_marginEnd="@dimen/dimen10dp"
                     app:cardCornerRadius="@dimen/dimen10dp"
                     app:cardElevation="@dimen/dimen10dp"
-                    app:cardBackgroundColor="@color/walletBackground"
-                    android:layout_marginBottom="@dimen/dimen10dp">
+                    app:cardBackgroundColor="@color/headerColor">
                     <LinearLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
+                        android:paddingBottom="@dimen/dimen10dp"
+                        android:paddingStart="10dp"
                         android:orientation="vertical">
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:padding="@dimen/dimen10dp"
+                            android:paddingTop="@dimen/dimen10dp"
                             android:text="My Registered User"
+                            android:background="@color/headerColor"
                             android:textColor="@color/white"/>
                         <LinearLayout
                             android:layout_width="match_parent"
@@ -279,15 +317,16 @@
                             android:padding="@dimen/dimen10dp">
                             <TextView
                                 android:id="@+id/textView15"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_weight="1"
                                 android:text="Date"
                                 android:textColor="@color/white"/>
                             <TextView
                                 android:id="@+id/textView13"
-                                android:layout_width="wrap_content"
+                                android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
+                                android:gravity="center"
                                 android:layout_weight="1"
                                 android:text="Registered"
                                 android:textColor="@color/white"/>
