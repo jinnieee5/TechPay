@@ -106,7 +106,7 @@ public class ReferralBinder {
                             binding.ivCopyReferralLink.setOnClickListener(new View.OnClickListener() {
                                 @Override
                                 public void onClick(View v) {
-                                    Toast.makeText(context, "Referral link copied", Toast.LENGTH_SHORT).show();
+                                    BaseUtils.customToast(context,"Referral link copied.");
                                     ClipboardManager clipboard = (ClipboardManager)context.getSystemService(Context.CLIPBOARD_SERVICE);
                                     ClipData clip = ClipData.newPlainText("Referral Link", referralLink);
                                     clipboard.setPrimaryClip(clip);
