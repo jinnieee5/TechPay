@@ -35,13 +35,21 @@ public class BaseActivity extends AppCompatActivity {
         }
     }
     public boolean isOnline() {
+        boolean isOnline;
         Log.e("splash", "isOnline() called.");
         ConnectivityManager cm =
                 (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
         Log.e("splash", "ConnectivityManager - " + cm.toString());
         NetworkInfo netInfo = cm.getActiveNetworkInfo();
         Log.e("splash", "NetworkInfo - " + netInfo);
-        Log.e("splash", "first - " + (netInfo!=null) + ", second - " + netInfo.isConnectedOrConnecting());
-        return netInfo != null && netInfo.isConnectedOrConnecting();
+//        Log.e("splash", "first - " + (netInfo!=null) + ", second - " + netInfo.isConnectedOrConnecting());
+//        return netInfo != null && netInfo.isConnectedOrConnecting();
+        if(netInfo == null){
+            isOnline = false;
+        }else {
+            isOnline = true;
+        }
+//        return netInfo != null && netInfo.isConnectedOrConnecting();
+        return isOnline;
     }
 }
