@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">IndoTech</string>
+    <string name="app_name">TechPay</string>
 
     <!--coin image url-->
     <string name="coinImageUrl">https://techpayexchange-backend.techpay.io/CoinImages/</string>
