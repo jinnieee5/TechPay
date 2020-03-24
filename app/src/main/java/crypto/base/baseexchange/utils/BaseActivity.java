@@ -44,11 +44,11 @@ public class BaseActivity extends AppCompatActivity {
         Log.e("splash", "NetworkInfo - " + netInfo);
 //        Log.e("splash", "first - " + (netInfo!=null) + ", second - " + netInfo.isConnectedOrConnecting());
 //        return netInfo != null && netInfo.isConnectedOrConnecting();
-        if(netInfo == null){
-            isOnline = false;
-        }else {
-            isOnline = true;
-        }
+            if(netInfo == null){
+                isOnline = false;
+            }else {
+                isOnline = true;
+            }
 //        return netInfo != null && netInfo.isConnectedOrConnecting();
         return isOnline;
     }

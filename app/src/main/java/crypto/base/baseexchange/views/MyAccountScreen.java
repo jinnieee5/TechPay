@@ -118,7 +118,7 @@ public class MyAccountScreen extends BaseActivity {
                 Uri imageUri = Objects.requireNonNull(result).getUri();
                 try {
                     Bitmap bitmap = MediaStore.Images.Media.getBitmap(this.getContentResolver(), imageUri);
-                    bitmap.compress(Bitmap.CompressFormat.PNG, 100, new FileOutputStream(result.getUri().toString()));
+                    bitmap.compress(Bitmap.CompressFormat.PNG, 50, new FileOutputStream(result.getUri().toString()));
 
                     checkPicToSet(bitmap);
                     Log.e("MyAccountScreen","try block");
@@ -269,7 +269,7 @@ public class MyAccountScreen extends BaseActivity {
         try {
             Bitmap bitmap = ((BitmapDrawable) imageView.getDrawable()).getBitmap();
             ByteArrayOutputStream byteArrayOutputStream = new ByteArrayOutputStream();
-            bitmap.compress(Bitmap.CompressFormat.JPEG, 100, byteArrayOutputStream);
+            bitmap.compress(Bitmap.CompressFormat.JPEG, 50, byteArrayOutputStream);
             byte[] byteArray = byteArrayOutputStream.toByteArray();
             profilePicString = Base64.encodeToString(byteArray, Base64.DEFAULT);
             return profilePicString;
